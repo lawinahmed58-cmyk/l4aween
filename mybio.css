@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url(https://images.pexels.com/photos/20943516/pexels-photo-20943516.jpeg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glass Card */
+.glass-card {
+    width: 340px;
+    padding: 35px;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.077);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    color: white;
+    animation: fadeInUp 1s ease;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.6);
+    margin-bottom: 15px;
+    animation: pop 1.2s ease;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.job {
+    opacity: 0.8;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.desc {
+    font-size: 14px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* Links */
+.links a {
+    display: block;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Brand colors on hover */
+.instagram:hover { background: #e1306c; }
+.tiktok:hover { background: #000; }
+.telegram:hover { background: #0088cc; }
+
+.links a:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop {
+    0% { transform: scale(0); }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
